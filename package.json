@@ -1,7 +1,7 @@
 {
-  "name": "kerry-gatsby-starter",
+  "name": "kerry-blog-gatsby-starter",
   "private": true,
-  "description": "Use Kerry's Starter to start your next great Gatsby project.  ",
+  "description": "Use Kerry Blog Gatsby Starter to start your next great Gatsby project.  ",
   "version": "0.1.0",
   "author": "Kerry <hello.kerrytokyo@gmail.com>",
   "dependencies": {

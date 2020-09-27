@@ -2,8 +2,8 @@ const path = require("path");
 
 module.exports = {
   siteMetadata: {
-    title: `Kerry Gatsby Starter`,
-    description: `Use Kerry's Starter to start your next great Gatsby project.`,
+    title: `Kerry Blog Gatsby Starter`,
+    description: `Use Kerry Blog Gatsby Starter to start your next great Gatsby project.`,
     author: `@kerry-tokyo`,
   },
   mapping: {

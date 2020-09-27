@@ -20,7 +20,7 @@ export default function Index({ data }) {
 
       <Hero
         normal
-        title="Kerry Gatsby Starter is a modern starter that uses TypeScript, React and
+        title="Kerry Blog Gatsby Starter is a modern starter that uses TypeScript, React and
         CSS modules."
       />
 

@@ -1,8 +1,8 @@
 ![hero](src/assets/images/hero.png)
 
-# Kerry Gatsby Starter
+# Kerry Blog Gatsby Starter
 
-Use Kerry's Starter to start your next great Gatsby project.This starter is a customized starter of [ueno-gatsby-starter](https://github.com/ueno-llc/ueno-gatsby-starter). (Thanks [@ueno-llc🙏](https://github.com/ueno-llc/))
+Use Kerry Blog Gatsby Starter to start your next great Gatsby project.This starter is a customized starter of [kerry-gatsby-starter](https://github.com/kerry-tokoy/kerry-gatsby-starter).
 
 ## Quick start
 
@@ -11,7 +11,7 @@ Use Kerry's Starter to start your next great Gatsby project.This starter is a cu
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd kerry-gatsby-starter
+    cd kerry-blog-gatsby-starter
     npm install
     gatsby develop
     ```
