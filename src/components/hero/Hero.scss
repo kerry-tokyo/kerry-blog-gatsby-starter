@@ -1,0 +1,25 @@
+@import "~styles/config";
+
+.hero {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  @include flex;
+  width: 100%;
+  letter-spacing: -0.03em;
+  & h1 {
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+    font-size: $font-size-hero;
+    max-width: $desktop;
+    margin: auto;
+  }
+
+  & .strong {
+    @include gradation-accent-text;
+  }
+}
+
+.hero__normal {
+  margin: $block-single-margin 0;
+}

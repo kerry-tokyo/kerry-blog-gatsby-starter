@@ -1,0 +1,87 @@
+//Headings
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0 auto;
+  font-weight: 500;
+  color: $primary;
+  font-family: $sans;
+  font-weight: 800;
+  width: auto;
+  max-width: 1500px;
+  letter-spacing: -0.01em;
+}
+
+h1,
+h1 *,
+h2,
+h2 * {
+  margin: 0 0 1rem;
+}
+
+h3,
+h3 * {
+  margin: 0 0 1rem;
+}
+
+h1 {
+  font-size: $font-size-hero;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-size: $font-size-l;
+  line-height: 1.55;
+  margin-bottom: 0.6em;
+}
+
+h6,
+strong {
+  font-size: $font-size;
+  font-weight: 700;
+  line-height: $line-height;
+}
+
+//White
+.font__white {
+  #tabs__show,
+  & h1,
+  a,
+  blockquote,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $dark-title !important;
+  }
+
+  & svg * {
+    fill: $dark-title !important;
+  }
+
+  & hr,
+  .hr {
+    border-color: $dark-horizontalRule;
+  }
+
+  & p,
+  figcaption {
+    color: $dark-paragraph;
+  }
+
+  & #tabs__hide {
+    color: $dark-grey;
+
+    &:hover {
+      color: $dark-title;
+    }
+  }
+}

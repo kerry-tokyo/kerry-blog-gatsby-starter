@@ -1,0 +1,31 @@
+@import "~styles/config";
+
+.link {
+  display: inline-flex;
+  margin-right: calc(2rem + (50 - 20) * ((100vw - 375px) / (1500 - 375)));
+  text-decoration: none;
+  transition: 200ms opacity ease-in-out;
+  text-transform: capitalize;
+  font-weight: 500;
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  &__icon {
+    position: relative;
+    width: auto;
+    height: 1.8rem;
+    & * {
+      fill: $primary;
+    }
+  }
+  &.active {
+    color: $accent;
+    pointer-events: none;
+  }
+}

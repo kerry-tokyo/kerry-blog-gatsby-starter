@@ -1,0 +1,30 @@
+@import "~styles/config";
+
+#header {
+  @include container;
+  z-index: 1000;
+  max-width: 100%;
+  margin: 3rem auto;
+  background: var(--background-color);
+  will-change: transform;
+  transition: var(--scroll);
+  @include inline-flex($justify-content: space-between);
+  //Move
+  &.move {
+    transform: translateY(-150%);
+  }
+  //Container
+  & .header__container {
+    @include inline-flex;
+  }
+  //Logo
+  & .header__logo {
+    @include inline-flex & svg {
+      height: 2.5rem;
+      width: auto;
+    }
+  }
+  & * {
+    font-size: 1.6rem;
+  }
+}

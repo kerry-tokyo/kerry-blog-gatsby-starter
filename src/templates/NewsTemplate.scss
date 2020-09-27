@@ -1,0 +1,94 @@
+@import "~styles/config";
+
+:global {
+  @import "~styles/base";
+}
+
+.news {
+  margin: $block-single-margin $container-gutter 0;
+  padding-bottom: $block-padding;
+  //hero
+  &__title {
+    max-width: $max-768;
+  }
+  &__sub__container * {
+    display: inline-block;
+    font-size: $font-size-min;
+    font-weight: 300;
+  }
+
+  &__category {
+    font-weight: 700;
+    &:after {
+      content: "-";
+      margin: 0 0.5em;
+      font-weight: 300;
+    }
+  }
+  &__date {
+    font-size: $font-size-min;
+    font-weight: 300;
+  }
+
+  &__hero__container {
+    margin-top: $container-gutter;
+    height: calc(300px + (700 - 300) * ((100vw - 375px) / (1500 - 375)));
+    overflow: hidden;
+    border-radius: $rounded-l;
+  }
+  &__hero {
+    height: 100%;
+  }
+  &__back__button {
+    @include inline-flex;
+    font-size: $font-size-min;
+    font-weight: 700;
+    margin-bottom: $container-gutter;
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    & svg {
+      @include icon($icon-size: $icon-size-min);
+      margin-right: 0.5em;
+    }
+  }
+  &__author {
+    margin-top: $gutter;
+    @include inline-flex;
+    &__avatar__container {
+      @include avatar-container;
+    }
+    &__avatar {
+      @include avatar;
+    }
+    &__name {
+      @include avatar-name;
+    }
+  }
+  //typography
+  &__content {
+    margin: $block-single-margin auto 0;
+    max-width: $tablet;
+    & h2 {
+      margin-top: $container-gutter;
+    }
+    & p {
+      margin-bottom: $gutter;
+    }
+    & a {
+      color: $accent;
+      @include line-hover;
+    }
+    & blockquote {
+      @include quote;
+    }
+    & hr {
+      border-top: $border;
+      margin: $gutter 0;
+    }
+    & li {
+      @include list;
+    }
+    & img {
+      padding-bottom: $gutter;
+    }
+  }
+}

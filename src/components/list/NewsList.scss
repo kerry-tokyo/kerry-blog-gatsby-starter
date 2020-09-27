@@ -1,0 +1,61 @@
+@import "~styles/config";
+
+:global {
+  @import "~styles/base";
+}
+
+.news__list {
+  display: grid;
+  gap: $container-gutter $gutter * 2;
+  padding: 0 $container-gutter $block-padding;
+  margin: $container-gutter 0;
+
+  @media (min-width: $tablet) {
+    grid-template-columns: 1fr 1fr;
+  }
+  &__title__container {
+    @include inline-flex($justify-content: space-between);
+    width: 100%;
+    margin-top: $gutter;
+  }
+  &__title {
+    margin: 0;
+  }
+  &__sub__container * {
+    display: inline-block;
+    font-size: $font-size-min;
+    font-weight: 300;
+  }
+  &__category {
+    font-weight: 700;
+    &:after {
+      content: "-";
+      margin: 0 0.5em;
+      font-weight: 300;
+    }
+  }
+  &__date {
+  }
+  &__avatar__container {
+    @include avatar-container(
+      $avatar-container-size: $avatar-container-size-s,
+      $border-width: 2px
+    );
+  }
+  &__avatar {
+    @include avatar($avatar-size: $avatar-size-s);
+  }
+  &__image__container {
+    height: calc(300px + (500 - 300) * ((100vw - 375px) / (1500 - 375)));
+    overflow: hidden;
+    transition: $hover-image;
+    border-radius: $rounded-l;
+
+    &:hover {
+      transform: scale(0.9);
+    }
+  }
+  &__image {
+    height: 100%;
+  }
+}
