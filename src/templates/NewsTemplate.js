@@ -21,7 +21,7 @@ export default function NewsTemplate({
       <div className={s.news}>
         <Link className={s.news__back__button} to="/">
           <Back />
-          Back
+          <span className={s.news__back__button__text}>Back</span>
         </Link>
         <h1 className={s.news__title}>{frontmatter.title}</h1>
         <div className={s.news__sub__container}>

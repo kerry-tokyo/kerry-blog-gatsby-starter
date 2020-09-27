@@ -44,10 +44,19 @@
     font-size: $font-size-min;
     font-weight: 700;
     margin-bottom: $container-gutter;
-    padding: 0.5rem 0.5rem 0.5rem 0;
+    padding: 0.5rem 2rem 0.5rem 0;
     & svg {
       @include icon($icon-size: $icon-size-min);
       margin-right: 0.5em;
+    }
+    &__text {
+      transform: translateX(0);
+      transition: $hover-button;
+    }
+    &:hover {
+      & span {
+        transform: translateX(1rem);
+      }
     }
   }
   &__author {
