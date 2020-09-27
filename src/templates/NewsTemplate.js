@@ -1,4 +1,5 @@
 import React from "react";
+import { Helmet } from "react-helmet";
 import { graphql } from "gatsby";
 import Image from "gatsby-image";
 
@@ -15,6 +16,8 @@ export default function NewsTemplate({
   const { frontmatter, html } = markdownRemark;
   return (
     <BaseLayout>
+      <Helmet title={frontmatter.title} />
+
       <div className={s.news}>
         <Link className={s.news__back__button} to="/">
           <Back />
