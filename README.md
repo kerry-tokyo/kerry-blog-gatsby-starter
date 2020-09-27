@@ -2,7 +2,7 @@
 
 # Kerry Blog Gatsby Starter
 
-Use Kerry Blog Gatsby Starter to start your next great Gatsby project.This starter is a customized starter of [kerry-gatsby-starter](https://github.com/kerry-tokoy/kerry-gatsby-starter).
+Use Kerry Blog Gatsby Starter to start your next great Gatsby project.This starter is a customized starter of [kerry-gatsby-starter](https://github.com/kerry-tokyo/kerry-gatsby-starter).
 
 ## Quick start
 
