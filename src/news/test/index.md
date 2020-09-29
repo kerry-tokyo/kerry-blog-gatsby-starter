@@ -97,7 +97,7 @@ But let's throw in a <b>tag</b>.
 
 ### JSX
 
-```jsx
+```jsx:title=test.jsx
 import React from "react";
 import { ThemeProvider } from "theme-ui";
 import theme from "./theme";

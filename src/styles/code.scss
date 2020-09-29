@@ -21,6 +21,19 @@ pre[class*="language-"] {
   hyphens: none;
 }
 
+//title
+.gatsby-code-title {
+  background: lighten($black, 10%);
+  color: $dark-paragraph;
+  margin-bottom: -2em;
+  padding: $gutter/2 $gutter;
+  font-size: $font-size-min;
+  border-radius: $rounded-l $rounded-l 0 0;
+  display: block;
+  z-index: 90;
+  position: relative;
+}
+
 /* Code blocks */
 pre[class*="language-"] {
   padding: $gutter;
@@ -31,7 +44,7 @@ pre[class*="language-"] {
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
   background: lighten($black, 10%);
-  border-radius: $rounded;
+  border-radius: $rounded-l;
 }
 
 /* Inline code */
