@@ -1,6 +1,6 @@
 code[class*="language-"],
 pre[class*="language-"] {
-  color: #ccc;
+  color: $code;
   background: none;
   font-family: $code;
   font-size: $font-size-code;
@@ -24,7 +24,7 @@ pre[class*="language-"] {
 //title
 .gatsby-code-title {
   background: lighten($black, 10%);
-  color: $dark-paragraph;
+  color: $code;
   margin-bottom: -2em;
   padding: $gutter/2 $gutter;
   font-size: $font-size-min;
@@ -63,7 +63,7 @@ pre[class*="language-"] {
 }
 
 .token.punctuation {
-  color: #ccc;
+  color: $code;
 }
 
 .token.tag,
