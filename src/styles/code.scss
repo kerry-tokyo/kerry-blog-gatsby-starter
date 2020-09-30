@@ -25,13 +25,15 @@ pre[class*="language-"] {
 .gatsby-code-title {
   background: lighten($black, 10%);
   color: $code;
-  margin-bottom: -2em;
+  margin-bottom: -1.6rem;
   padding: $gutter/2 $gutter;
   font-size: $font-size-min;
   border-radius: $rounded-l $rounded-l 0 0;
   display: block;
   z-index: 90;
   position: relative;
+  border: $border;
+  border-color: $dark-horizontalRule;
 }
 
 /* Code blocks */
