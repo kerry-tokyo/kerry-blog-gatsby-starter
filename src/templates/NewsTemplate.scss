@@ -76,8 +76,16 @@
   &__content {
     margin: $block-single-margin auto 0;
     max-width: $tablet;
-    & h2 {
+    & h2,
+    h3 {
       margin-top: $container-gutter;
+    }
+    & h3,
+    h4,
+    h5,
+    h6 {
+      font-size: $font-size;
+      font-weight: 500;
     }
     & p {
       margin-bottom: $gutter;

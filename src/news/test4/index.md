@@ -7,23 +7,9 @@ author: Kim Jackson
 category: Life
 ---
 
-## TL;DR
+## TL;DR👌🏻
 
 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-
-## Headers
-
-# H1
-
-## H2
-
-### H3
-
-#### H4
-
-##### H5
-
-###### H6
 
 ## Emphasis
 
@@ -97,13 +83,60 @@ But let's throw in a <b>tag</b>.
 
 ### JSX
 
-```jsx
-import React from "react";
-import { ThemeProvider } from "theme-ui";
-import theme from "./theme";
+```jsx:title=src/components/BaseLayout.jsx
+import React, { ReactNode } from "react";
+import { Helmet } from "react-helmet";
+import { Button } from "components/button/Button";
 
-export default (props) => (
-  <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
+import Logo from "../../assets/svg/kerry-logo.svg";
+import Dribbble from "../../assets/svg/dribbble.svg";
+import GitHub from "../../assets/svg/github.svg";
+import Spotify from "../../assets/svg/spotify.svg";
+import Letterboxd from "../../assets/svg/letterboxd.svg";
+
+import { helmet } from "../../utils/helmet";
+import { Header } from "../header/Header";
+import { HeaderLink } from "../header/HeaderLink";
+import { Footer } from "../footer/Footer";
+import { Devtools } from "../devtools/Devtools";
+
+import s from "./BaseLayout.scss";
+
+interface BaseLayoutProps {
+  children: ReactNode;
+}
+
+const isDev = process.env.NODE_ENV === "development";
+
+// tslint:disable no-default-export
+export default ({ children }: BaseLayoutProps) => (
+  <div className={s.layout}>
+    <Helmet {...helmet} />
+
+    <Header>
+      <HeaderLink to="/about" name="About" />
+      <HeaderLink to="/contact" name="Contact" />
+      <Button href="https://kerrytokyo.com/">Author</Button>
+    </Header>
+
+    {children}
+
+    <Footer
+      logo={<Logo />}
+      social={[
+        { icon: <Dribbble />, to: "https://dribbble.com/kerry-tokyo" },
+        { icon: <Letterboxd />, to: "https://letterboxd.com/vivingston" },
+        { icon: <GitHub />, to: "https://github.com/kerry-tokyo" },
+        {
+          icon: <Spotify />,
+          to:
+            "https://open.spotify.com/user/v8vi31q8nof0di7jzzsw7vhkd?si=rBHI-m6WQiuji_Ix0NYVow",
+        },
+      ]}
+    />
+
+    {isDev && <Devtools />}
+  </div>
 );
 ```
 
@@ -124,7 +157,7 @@ Three or more...
 
 ---
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+**Lorem Ipsum is simply dummy text of the printing and typesetting industry.** Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
 
 ---
 
