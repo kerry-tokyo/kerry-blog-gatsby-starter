@@ -24,7 +24,7 @@ pre[class*="language-"] {
 //title
 .gatsby-code-title {
   background: lighten($black, 10%);
-  color: $code;
+  color: $code-paragraph;
   margin-bottom: -1.6rem;
   padding: $gutter/2 $gutter;
   font-size: $font-size-min;
@@ -65,7 +65,7 @@ pre[class*="language-"] {
 }
 
 .token.punctuation {
-  color: $code;
+  color: $code-paragraph;
 }
 
 .token.tag,
